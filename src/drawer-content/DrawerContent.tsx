@@ -16,7 +16,7 @@ export const DrawerContent = ({
 		<View style={styles.container}>
 			<Text style={styles.header}>Factions</Text>
 			<View style={styles.checkboxContainer}>
-				{factions.map(faction => (
+				{factions.map((faction) => (
 					<TextCheckBox
 						text={faction.name}
 						onFactionToggle={onFactionToggle}
