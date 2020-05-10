@@ -153,16 +153,16 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 			Vibration.vibrate(100);
 			const factions = this.getFactions(this.participants.length);
 			this.participants.forEach((participant) => {
-				participant.faction = factions.pop();
+				participant.faction = factions.shift();
 			});
 			this.setState({ dispatched: true });
 			this.dispatchedParticipantsCount = this.participants.length;
 		}
 	};
 
-	getFactions = (playerCount) => {
+	getFactions = (playerCount: number): Faction[] => {
 		let factionValueSum = 0;
-		let factions = [];
+		let factions = [] as Faction[];
 		const minimumValueSum = this.ViableGameSums[playerCount];
 
 		let allFactionsValueSum = 0;
@@ -183,7 +183,6 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 			factionValueSum <= minimumValueSum &&
 			!isImpossibleFactionValueSum
 		);
-		console.log(isImpossibleFactionValueSum);
 		return factions;
 	};
 
