@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Vibration } from 'react-native';
-import { MultiTouchView } from 'expo-multi-touch';
+import { MultiTouchView } from '../../lib/multi-touch';
 import {
 	ParticipantTarget,
 	ParticipantTargetProps
@@ -75,50 +75,30 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 				}
 			}));
 		},
-		onTouchEnded: (event) => {
-			if (this.showing) return;
+		onTouchEnded: (event) => this.onTouchRemoved(event),
+		onTouchCancelled: (event) => this.onTouchRemoved(event)
+	};
 
-			const { identifier, deltaX, deltaY, isTap } = event;
+	onTouchRemoved = (event) => {
+		if (this.showing) return;
+		const { identifier, deltaX, deltaY, isTap } = event;
 
-			this.participants = this.participants.filter(
-				(participant) => !!participant
-			);
-			if (this.state.dispatched && !this.participants[identifier]) return;
+		this.participants = this.participants.filter(
+			(participant) => !!participant
+		);
+		if (this.state.dispatched && !this.participants[identifier]) return;
 
-			if (this.state.dispatched) {
-				this.dispatchedParticipantsCount--;
-				if (this.dispatchedParticipantsCount <= 0) {
-					this.showFactions();
-				}
-				return;
+		if (this.state.dispatched) {
+			this.dispatchedParticipantsCount--;
+			if (this.dispatchedParticipantsCount <= 0) {
+				this.showFactions();
 			}
-
-			if (!this.participants[identifier]) return;
-			// this.participants[identifier].ref.current.shrink(this.resetParticipantTarget);
-			this.resetParticipantTarget(identifier);
-		},
-		onTouchCancelled: (event) => {
-			if (this.showing) return;
-
-			const { identifier, deltaX, deltaY, isTap } = event;
-
-			this.participants = this.participants.filter(
-				(participant) => !!participant
-			);
-			if (this.state.dispatched && !this.participants[identifier]) return;
-
-			if (this.state.dispatched) {
-				this.dispatchedParticipantsCount--;
-				if (this.dispatchedParticipantsCount <= 0) {
-					this.showFactions();
-				}
-				return;
-			}
-
-			if (!this.participants[identifier]) return;
-			// this.participants[identifier].ref.current.shrink(this.resetParticipantTarget);
-			this.resetParticipantTarget(identifier);
+			return;
 		}
+
+		if (!this.participants[identifier]) return;
+		// this.participants[identifier].ref.current.shrink(this.resetParticipantTarget);
+		this.resetParticipantTarget(identifier);
 	};
 
 	showFactions = () => {
@@ -145,7 +125,6 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 		this.participants = this.participants.filter(
 			(participant) => !!participant
 		);
-
 		if (
 			this.participants.length > 1 &&
 			this.participants.every((p) => p.ready)
@@ -194,7 +173,7 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 			}
 		}));
 		this.setState({ dispatched: false });
-		// delete this.participants[identifier];
+		delete this.participants[identifier];
 	};
 
 	private shuffleFactions = () => {

@@ -37,28 +37,21 @@ export class Faction {
 	}
 }
 
+export const Factions = [
+	new Faction('Marquise de Cat', 10, '#FD5200', images.cat),
+	new Faction('Underground Duchy', 8, '#D7A872', images.taupe),
+	new Faction('Eyrie Dynasties', 7, '#4774B7', images.bird),
+	new Faction('Vagabond', 5, '#FCFEFD', images.vagabond),
+	new Faction('Riverfolk Company', 5, '#61DDFB', images.otter),
+	new Faction('Woodland Alliance', 3, '#59BA53', images.mouse),
+	new Faction('Corvid Consipiracy', 3, '#290D7E', images.raven),
+	new Faction('Lizard Cult', 2, '#f1f435', images.lizard)
+];
+
 export default class App extends Component {
 	state = {
-		factions: [
-			new Faction('Marquise de Cat', 10, '#FD5200', images.cat),
-			new Faction('Underground Duchy', 8, '#D7A872', images.taupe),
-			new Faction('Eyrie Dynasties', 7, '#4774B7', images.bird),
-			new Faction('Vagabond', 5, '#FCFEFD', images.vagabond),
-			new Faction('Riverfolk Company', 5, '#61DDFB', images.otter),
-			new Faction('Woodland Alliance', 3, '#59BA53', images.mouse),
-			new Faction('Corvid Consipiracy', 3, '#290D7E', images.raven),
-			new Faction('Lizard Cult', 2, '#f1f435', images.lizard)
-		],
-		usedFactions: [
-			new Faction('Marquise de Cat', 10, '#FD5200', images.cat),
-			new Faction('Underground Duchy', 8, '#D7A872', images.taupe),
-			new Faction('Eyrie Dynasties', 7, '#4774B7', images.bird),
-			new Faction('Vagabond', 5, '#FCFEFD', images.vagabond),
-			new Faction('Riverfolk Company', 5, '#61DDFB', images.otter),
-			new Faction('Woodland Alliance', 3, '#59BA53', images.mouse),
-			new Faction('Corvid Consipiracy', 3, '#290D7E', images.raven),
-			new Faction('Lizard Cult', 2, '#f1f435', images.lizard)
-		]
+		factions: [...Factions],
+		usedFactions: [...Factions]
 	};
 
 	render() {
@@ -103,11 +96,11 @@ export default class App extends Component {
 		let newFactions = [];
 		if (!isSelected) {
 			newFactions = this.state.usedFactions.filter(
-				faction => faction.name !== factionName
+				(faction) => faction.name !== factionName
 			);
 		} else {
 			const newFaction = this.state.factions.filter(
-				faction => faction.name === factionName
+				(faction) => faction.name === factionName
 			);
 			newFactions = this.state.usedFactions;
 			newFactions.push(newFaction[0]);
