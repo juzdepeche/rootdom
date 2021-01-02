@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { StyleSheet, View, Text, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, StatusBar, LogBox } from 'react-native';
 import MultiTouch from './src/multi-touch/MultiTouch';
 import PickerCheckBox from 'react-native-picker-checkbox';
 import { Checkbox } from 'react-native-paper';
@@ -13,6 +13,10 @@ export default class App extends Component {
 		factions: [...Factions],
 		usedFactions: [...Factions]
 	};
+
+	componentDidMount() {
+		LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
+	}
 
 	render() {
 		StatusBar.setHidden(true, 'slide');
