@@ -1,10 +1,10 @@
 import React, {
-	useEffect,
-	useState,
 	forwardRef,
-	useImperativeHandle
+	useEffect,
+	useImperativeHandle,
+	useState
 } from 'react';
-import { View, StyleSheet, Animated, Image, Text } from 'react-native';
+import { Animated, Image, StyleSheet, View } from 'react-native';
 import { Faction } from '../models/Faction';
 
 const colors = [

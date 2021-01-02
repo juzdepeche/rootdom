@@ -1,6 +1,6 @@
+import { CheckBox } from 'native-base';
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { View, CheckBox } from 'native-base';
 
 type TextCheckBoxProps = {
 	text: string;

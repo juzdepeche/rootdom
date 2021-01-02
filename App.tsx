@@ -1,12 +1,9 @@
-import React, { Component, useState } from 'react';
-import { StyleSheet, View, Text, StatusBar, LogBox } from 'react-native';
-import MultiTouch from './src/multi-touch/MultiTouch';
-import PickerCheckBox from 'react-native-picker-checkbox';
-import { Checkbox } from 'react-native-paper';
+import React, { Component } from 'react';
+import { LogBox, StatusBar, StyleSheet, View } from 'react-native';
 import BouncyDrawer from 'react-native-bouncy-drawer';
-import Constants from 'expo-constants';
 import { DrawerContent } from './src/drawer-content/DrawerContent';
 import { Factions } from './src/models/Faction';
+import MultiTouch from './src/multi-touch/MultiTouch';
 
 export default class App extends Component {
 	state = {
