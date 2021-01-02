@@ -22,10 +22,6 @@ export default class App extends Component {
 			<View style={styles.container}>
 				<MultiTouch factions={usedFactions}></MultiTouch>
 				<BouncyDrawer
-					willOpen={() => console.log('will open')}
-					didOpen={() => console.log('did open')}
-					willClose={() => console.log('will close')}
-					didClose={() => console.log('did close')}
 					titleStyle={{ color: '#fff', fontSize: 20, marginLeft: -3 }}
 					closedHeaderStyle={{ backgroundColor: 'transparent' }}
 					openedHeaderStyle={{ backgroundColor: 'transparent' }}
