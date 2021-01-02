@@ -35,10 +35,6 @@ export default class App extends Component {
 		);
 	}
 
-	onCheckBoxSelected = () => {
-		this.setState({});
-	};
-
 	renderContent = () => {
 		return (
 			<DrawerContent
