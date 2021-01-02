@@ -23,6 +23,10 @@ export default class App extends Component {
 			<View style={styles.container}>
 				<MultiTouch factions={usedFactions}></MultiTouch>
 				<BouncyDrawer
+					willOpen={() => null}
+					didOpen={() => null}
+					willClose={() => null}
+					didClose={() => null}
 					titleStyle={{ color: '#fff', fontSize: 20, marginLeft: -3 }}
 					closedHeaderStyle={{ backgroundColor: 'transparent' }}
 					openedHeaderStyle={{ backgroundColor: 'transparent' }}
