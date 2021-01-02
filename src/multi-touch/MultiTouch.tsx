@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Vibration } from 'react-native';
+import { View, StyleSheet, Vibration } from 'react-native';
 import { MultiTouchView } from '../../lib/multi-touch';
+import { Faction } from '../models/Faction';
 import {
 	ParticipantTarget,
 	ParticipantTargetProps
 } from '../participant/ParticipantTarget';
-import { Faction } from '../../App';
 
 const SHOW_TIME = 4000;
 
