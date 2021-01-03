@@ -63,12 +63,14 @@ export const ParticipantTarget = forwardRef(
 		const startScaleAndOpacityAnimation = () => {
 			Animated.timing(opacityPercentageValue, {
 				toValue: 1,
-				duration: TIME_NEEDED
+				duration: TIME_NEEDED,
+				useNativeDriver: true
 			}).start();
 
 			const pulseAnimation = Animated.timing(pulsePercantageValue, {
 				toValue: 3,
-				duration: SCALE_ANIMATION_DURATION
+				duration: SCALE_ANIMATION_DURATION,
+				useNativeDriver: true
 			});
 
 			setAnimation(pulseAnimation);
@@ -91,7 +93,8 @@ export const ParticipantTarget = forwardRef(
 				animation.stop();
 				Animated.spring(pulsePercantageValue, {
 					toValue: 0,
-					speed: 20
+					speed: 20,
+					useNativeDriver: true
 				}).start(() => destroyCallback(index));
 			}
 		}));
