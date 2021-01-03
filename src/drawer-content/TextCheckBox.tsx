@@ -1,6 +1,6 @@
-import { CheckBox } from 'native-base';
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import CheckBox from '@react-native-community/checkbox';
 
 type TextCheckBoxProps = {
 	text: string;
@@ -17,11 +17,7 @@ export const TextCheckBox = ({ text, onFactionToggle }: TextCheckBoxProps) => {
 
 	return (
 		<TouchableOpacity onPress={() => onToggle()} style={styles.item}>
-			<CheckBox
-				checked={isSelected}
-				color="#364f6b"
-				onPress={() => onToggle()}
-			/>
+			<CheckBox value={isSelected} onChange={() => onToggle()} />
 			<Text
 				style={[
 					{
