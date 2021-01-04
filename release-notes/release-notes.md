@@ -1,5 +1,13 @@
 # RootDom release notes
 
+## 1.0.2
+
+20.1.4
+
+### Features
+
+-   Vibrate device when factions are revealed
+
 ## 1.0.1
 
 20.1.2
