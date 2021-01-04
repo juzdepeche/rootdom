@@ -6,8 +6,8 @@
 		"platforms": ["android"],
 		"android": {
 			"package": "com.juzdepeche.rootdom",
-			"versionCode": 3,
-			"permissions": [],
+			"versionCode": 4,
+			"permissions": ["VIBRATE"],
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/icons/adaptive-icon.png",
 				"backgroundColor": "#FD5200"

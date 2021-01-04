@@ -1,63 +1,63 @@
 {
-	"main": "node_modules/expo/AppEntry.js",
-	"scripts": {
-		"start": "expo start",
-		"android": "expo start --android",
-		"ios": "expo start --ios",
-		"web": "expo start --web",
-		"eject": "expo eject",
-		"test": "jest --watch --coverage=false --changedSince=origin/master",
-		"testDebug": "jest -o --watch --coverage=false",
-		"testFinal": "jest",
-		"updateSnapshots": "jest -u --coverage=false"
-	},
-	"dependencies": {
-		"@material-ui/core": "^4.9.5",
-		"@material-ui/icons": "^4.9.1",
-		"@react-native-community/checkbox": "^0.5.6",
-		"expo": "^40.0.0",
-		"expo-multi-touch": "0.0.0",
-		"native-base": "^2.13.8",
-		"react": "16.13.1",
-		"react-animations": "^1.0.0",
-		"react-arc-text": "^1.0.5",
-		"react-dom": "16.13.1",
-		"react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-		"react-native-bouncy-drawer": "^1.0.1",
-		"react-native-elements": "0.18.5",
-		"react-native-gesture-handler": "~1.8.0",
-		"react-native-paper": "^3.6.0",
-		"react-native-picker-checkbox": "^2.0.2",
-		"react-native-reanimated": "~1.13.0",
-		"react-native-screens": "~2.15.0",
-		"react-native-svg": "12.1.0",
-		"react-native-web": "~0.13.12",
-		"react-navigation": "^4.2.2",
-		"react-navigation-drawer": "^2.4.2",
-		"react-navigation-stack": "^2.2.3",
-		"react-svg-text": "^0.1.2",
-		"semantic-ui-react": "^0.88.2",
-		"styled-components": "^5.0.1"
-	},
-	"devDependencies": {
-		"@babel/core": "~7.9.0",
-		"@types/jest": "^26.0.19",
-		"@types/react": "~16.9.35",
-		"@types/react-native": "~0.63.2",
-		"@types/react-test-renderer": "^17.0.0",
-		"babel-preset-expo": "8.3.0",
-		"jest-expo": "^40.0.1",
-		"typescript": "~4.0.0"
-	},
-	"jest": {
-		"collectCoverage": true,
-		"collectCoverageFrom": [
-			"**/*.{ts,tsx}"
-		],
-		"preset": "jest-expo",
-		"transformIgnorePatterns": [
-			"node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
-		]
-	},
-	"private": true
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest --watch --coverage=false --changedSince=origin/master",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testFinal": "jest",
+    "updateSnapshots": "jest -u --coverage=false"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
+    "@react-native-community/checkbox": "^0.5.6",
+    "expo": "^40.0.0",
+    "expo-multi-touch": "0.0.0",
+    "native-base": "^2.13.8",
+    "react": "16.13.1",
+    "react-animations": "^1.0.0",
+    "react-arc-text": "^1.0.5",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-bouncy-drawer": "^1.0.1",
+    "react-native-elements": "0.18.5",
+    "react-native-gesture-handler": "~1.8.0",
+    "react-native-paper": "^3.6.0",
+    "react-native-picker-checkbox": "^2.0.2",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-screens": "~2.15.0",
+    "react-native-svg": "12.1.0",
+    "react-native-web": "~0.13.12",
+    "react-navigation": "^4.2.2",
+    "react-navigation-drawer": "^2.4.2",
+    "react-navigation-stack": "^2.2.3",
+    "react-svg-text": "^0.1.2",
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "@types/jest": "^26.0.19",
+    "@types/react": "~16.9.35",
+    "@types/react-native": "~0.63.2",
+    "@types/react-test-renderer": "^17.0.0",
+    "babel-preset-expo": "8.3.0",
+    "jest-expo": "^40.0.0",
+    "typescript": "~4.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}"
+    ],
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ]
+  },
+  "private": true
 }
