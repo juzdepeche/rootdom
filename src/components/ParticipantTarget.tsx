@@ -151,6 +151,8 @@ export const ParticipantTarget = forwardRef(
 	}
 );
 
+export default ParticipantTarget;
+
 const styles = StyleSheet.create({
 	touch: {
 		position: 'absolute',

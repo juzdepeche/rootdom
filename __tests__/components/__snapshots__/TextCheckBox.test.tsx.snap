@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrawerContent /> renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f6f6f6",
+      "borderRadius": 20,
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "opacity": 1,
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    pointerEvents="auto"
+  >
+    <RNCCheckbox
+      forwardedRef={null}
+      onChange={[Function]}
+      onValueChange={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "height": 32,
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      value={true}
+    />
+  </View>
+  <Text
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "color": "#364f6b",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginLeft": 20,
+        },
+      ]
+    }
+  >
+    Marquise de Cat
+  </Text>
+</View>
+`;

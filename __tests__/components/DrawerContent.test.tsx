@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Factions } from '../models/Faction';
-import { DrawerContent } from './DrawerContent';
+import { Factions } from '../../src/models/Faction';
+import { DrawerContent } from '../../src/components/DrawerContent';
 
 describe('<DrawerContent />', () => {
 	it('renders correctly', () => {

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiTouch /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onMoveShouldSetPanResponder={[Function]}
+    onMoveShouldSetPanResponderCapture={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onPanResponderTerminationRequest={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onShouldBlockNativeResponder={[Function]}
+    onStartShouldSetPanResponder={[Function]}
+    onStartShouldSetPanResponderCapture={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onTouchBegan={[Function]}
+    onTouchCancelled={[Function]}
+    onTouchEnded={[Function]}
+    onTouchMoved={[Function]}
+    onTouchesBegan={[Function]}
+    onTouchesCancelled={[Function]}
+    onTouchesEnded={[Function]}
+    onTouchesMoved={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;

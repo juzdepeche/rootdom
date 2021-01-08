@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Vibration, View } from 'react-native';
 import { MultiTouchView } from '../../lib/multi-touch';
 import { Faction, ViableGameSums } from '../models/Faction';
-import { ParticipantTarget } from '../participant/ParticipantTarget';
+import { ParticipantTarget } from './ParticipantTarget';
 
 const SHOW_TIME = 4000;
 

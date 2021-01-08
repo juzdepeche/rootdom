@@ -35,6 +35,8 @@ export const TextCheckBox = ({ text, onFactionToggle }: TextCheckBoxProps) => {
 	);
 };
 
+export default TextCheckBox;
+
 const styles = StyleSheet.create({
 	item: {
 		width: '100%',

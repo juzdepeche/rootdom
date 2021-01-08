@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ParticipantTarget /> renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#FD5200",
+        "borderRadius": 50,
+        "left": 100,
+        "opacity": 0.6,
+        "position": "absolute",
+        "top": 200,
+        "transform": Array [
+          Object {
+            "translateX": -50,
+          },
+          Object {
+            "translateY": -50,
+          },
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 100,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+</View>
+`;
