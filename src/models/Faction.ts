@@ -25,12 +25,28 @@ export const Factions = [
 	new Faction('Lizard Cult', 2, '#f1f435', images.lizard)
 ];
 
-export const ViableGameSums = () => {
-	const sums = [];
-	sums[2] = 17;
-	sums[3] = 18;
-	sums[4] = 21;
-	sums[5] = 25;
-	sums[6] = 28;
-	return sums;
+export const GetViableGameSum = (playerCount:number) => {
+	switch (playerCount) {
+		case 2:
+			return 17;
+		case 3:
+			return 18;
+		case 4:
+			return 21;
+		case 5:
+			return 25;
+		case 6:
+			return 28;
+		default:
+			return 0;
+	}
+}
+
+export const GetBigFactionsSum = (factions:Faction[], playerCount:number) => {
+	let sum = 0;
+	factions.sort((a, b) => a.value > b.value ? -1 : 1)
+	for (let i = 0; i < playerCount; i++) {
+		sum += factions[i].value;
+	}
+	return sum;
 }

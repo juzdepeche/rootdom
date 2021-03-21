@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Vibration, View } from 'react-native';
 import { MultiTouchView } from '../../lib/multi-touch';
-import { Faction, ViableGameSums } from '../models/Faction';
+import {
+	Faction,
+	GetViableGameSum,
+	GetBigFactionsSum
+} from '../models/Faction';
 import { ParticipantTarget } from './ParticipantTarget';
 
 const SHOW_TIME = 4000;
@@ -129,14 +133,18 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 	getFactions = (playerCount: number): Faction[] => {
 		let factionValueSum = 0;
 		let factions = [] as Faction[];
-		const minimumValueSum = ViableGameSums[playerCount];
 
 		let allFactionsValueSum = 0;
 		let isImpossibleFactionValueSum = false;
 		this.props.factions.forEach((faction) => {
 			allFactionsValueSum += faction.value;
 		});
-		isImpossibleFactionValueSum = allFactionsValueSum < minimumValueSum;
+		const minimumValueSum = GetViableGameSum(playerCount);
+		const topFactionsSum = GetBigFactionsSum(
+			this.props.factions,
+			playerCount
+		);
+		isImpossibleFactionValueSum = topFactionsSum < minimumValueSum;
 
 		do {
 			factionValueSum = 0;
@@ -146,7 +154,7 @@ export default class MultiTouch extends Component<{ factions: Faction[] }> {
 				factionValueSum += factions[i].value;
 			}
 		} while (
-			factionValueSum <= minimumValueSum &&
+			factionValueSum < minimumValueSum &&
 			!isImpossibleFactionValueSum
 		);
 		return factions;
