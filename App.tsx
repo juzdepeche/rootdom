@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { LogBox, StatusBar, StyleSheet, View } from 'react-native';
 import BouncyDrawer from 'react-native-bouncy-drawer';
-import { DrawerContent } from './src/drawer-content/DrawerContent';
+import { DrawerContent } from './src/components/DrawerContent';
+import MultiTouch from './src/components/MultiTouch';
 import { Factions } from './src/models/Faction';
-import MultiTouch from './src/multi-touch/MultiTouch';
 
 export default class App extends Component {
 	state = {
