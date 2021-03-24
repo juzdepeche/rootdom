@@ -1,5 +1,13 @@
 # RootDom release notes
 
+## 1.0.3
+
+20.3.21
+
+### Defects
+
+-   Fix faction distribution algorithm
+
 ## 1.0.2
 
 20.1.4
