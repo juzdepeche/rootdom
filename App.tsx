@@ -19,17 +19,21 @@ export default class App extends Component {
 
 	componentDidMount() {
 		LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
-	}
-
-	render() {
-		StatusBar.setHidden(true, 'slide');
-		const { usedFactions } = this.state;
 
 		ToastAndroid.showWithGravity(
 			'Each player must put a finger on the screen',
 			ToastAndroid.LONG,
 			ToastAndroid.CENTER
 		);
+
+		this.setState({
+			usedFactions: Factions.filter((f) => f.available)
+		});
+	}
+
+	render() {
+		StatusBar.setHidden(true, 'slide');
+		const { usedFactions } = this.state;
 
 		return (
 			<View style={styles.container}>

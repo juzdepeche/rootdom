@@ -6,7 +6,9 @@ const images = {
 	lizard: require('./lizard.png'),
 	raven: require('./raven.png'),
 	taupe: require('./taupe.png'),
-	otter: require('./otter.png')
+	otter: require('./otter.png'),
+	rat: require('./rat.png'),
+	badger: require('./badger.png')
 };
 
 export default images;

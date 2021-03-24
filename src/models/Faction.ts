@@ -5,18 +5,22 @@ export class Faction {
 	public value: number;
 	public color: string;
 	public image;
+	public available;
 
-	constructor(name: string, value: number, color: string, image?) {
+	constructor(name: string, value: number, color: string, image?, available = true) {
 		this.name = name;
 		this.value = value;
 		this.color = color;
 		this.image = image;
+		this.available = available;
 	}
 }
 
 export const Factions = [
 	new Faction('Marquise de Cat', 10, '#FD5200', images.cat),
 	new Faction('Underground Duchy', 8, '#D7A872', images.taupe),
+	new Faction('Keepers in Iron', 8, '#CBCBCD', images.badger, false),
+	new Faction('Lord of The Hundreds', 8, '#C50730', images.rat, false),
 	new Faction('Eyrie Dynasties', 7, '#4774B7', images.bird),
 	new Faction('Vagabond', 5, '#FCFEFD', images.vagabond),
 	new Faction('Riverfolk Company', 5, '#61DDFB', images.otter),

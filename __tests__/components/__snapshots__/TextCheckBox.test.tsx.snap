@@ -40,7 +40,6 @@ exports[`<DrawerContent /> renders correctly 1`] = `
           undefined,
         ]
       }
-      value={true}
     />
   </View>
   <Text
@@ -48,9 +47,9 @@ exports[`<DrawerContent /> renders correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "#364f6b",
+          "color": "gray",
           "fontSize": 20,
-          "fontWeight": "bold",
+          "fontWeight": "normal",
           "marginLeft": 20,
         },
       ]

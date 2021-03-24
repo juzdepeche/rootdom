@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Faction } from '../models/Faction';
 import { TextCheckBox } from './TextCheckBox';
 
@@ -15,15 +15,20 @@ export const DrawerContent = ({
 	return (
 		<View style={styles.container}>
 			<Text style={styles.header}>Factions</Text>
-			<View style={styles.checkboxContainer}>
-				{factions.map((faction) => (
-					<TextCheckBox
-						key={faction.name}
-						text={faction.name}
-						onFactionToggle={onFactionToggle}
-					></TextCheckBox>
-				))}
-			</View>
+			<ScrollView style={styles.scrollViewContainer}>
+				<View style={styles.checkboxContainer}>
+					<View style={styles.centeredCheckboxContainer}>
+						{factions.map((faction) => (
+							<TextCheckBox
+								key={faction.name}
+								text={faction.name}
+								selected={faction.available}
+								onFactionToggle={onFactionToggle}
+							></TextCheckBox>
+						))}
+					</View>
+				</View>
+			</ScrollView>
 		</View>
 	);
 };
@@ -37,12 +42,17 @@ const styles = StyleSheet.create({
 	header: {
 		fontSize: 25,
 		fontWeight: 'bold',
-		color: '#364f6b',
-		marginBottom: 40,
-		paddingTop: 40
+		color: '#364f6b'
+	},
+	scrollViewContainer: {
+		width: '100%',
+		marginVertical: 40
 	},
 	checkboxContainer: {
-		width: '80%',
+		width: '100%',
 		alignItems: 'center'
+	},
+	centeredCheckboxContainer: {
+		width: '80%'
 	}
 });

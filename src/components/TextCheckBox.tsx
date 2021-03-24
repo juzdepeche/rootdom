@@ -4,11 +4,16 @@ import CheckBox from '@react-native-community/checkbox';
 
 type TextCheckBoxProps = {
 	text: string;
+	selected: boolean;
 	onFactionToggle: (factionName: string, isSelected: boolean) => void;
 };
 
-export const TextCheckBox = ({ text, onFactionToggle }: TextCheckBoxProps) => {
-	const [isSelected, setIsSelected] = useState(true);
+export const TextCheckBox = ({
+	text,
+	selected,
+	onFactionToggle
+}: TextCheckBoxProps) => {
+	const [isSelected, setIsSelected] = useState(selected);
 
 	const onToggle = () => {
 		onFactionToggle(text, !isSelected);
