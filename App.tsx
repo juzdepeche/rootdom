@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { LogBox, StatusBar, StyleSheet, View } from 'react-native';
+import {
+	LogBox,
+	StatusBar,
+	StyleSheet,
+	ToastAndroid,
+	View
+} from 'react-native';
 import BouncyDrawer from 'react-native-bouncy-drawer';
 import { DrawerContent } from './src/components/DrawerContent';
 import MultiTouch from './src/components/MultiTouch';
@@ -18,6 +24,12 @@ export default class App extends Component {
 	render() {
 		StatusBar.setHidden(true, 'slide');
 		const { usedFactions } = this.state;
+
+		ToastAndroid.showWithGravity(
+			'Each player must put a finger on the screen',
+			ToastAndroid.LONG,
+			ToastAndroid.CENTER
+		);
 
 		return (
 			<View style={styles.container}>
